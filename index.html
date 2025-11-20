@@ -36,7 +36,7 @@
         header {
             background: white;
             color: #333;
-            padding: 5px 0;
+            padding: 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -49,30 +49,30 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            padding: 0 10px;
+            padding: 0;
+            margin: 0;
+            gap: 0;
         }
 
-        /* LOGO - EXACT SIZE 144.4x48 */
+        /* LOGO - LARGER */
         .logo {
             flex-shrink: 0;
             padding: 0;
             margin: 0;
-            width: 144.4px;
-            height: 48px;
         }
 
         .logo img {
-            width: 144.4px;
-            height: 48px;
+            width: 150px;
+            height: 50px;
             object-fit: contain;
             display: block;
         }
 
-        /* BOOK NOW BUTTON - RAINBOW GRADIENT */
+        /* BOOK NOW BUTTON - LARGER */
         .book-now-button {
             background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DDA0DD, #98D8C8);
             color: white;
-            padding: 12px 24px;
+            padding: 14px 22px;
             border-radius: 25px;
             font-weight: 700;
             text-decoration: none;
@@ -82,7 +82,8 @@
             font-size: 15px;
             border: 2px solid white;
             text-align: center;
-            margin: 0 10px;
+            margin: 0;
+            flex-shrink: 0;
         }
 
         .book-now-button:hover {
@@ -90,11 +91,10 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        /* MAIN NAVIGATION */
+        /* MAIN NAVIGATION - HIDDEN ON MOBILE */
         .main-nav {
             display: flex;
             justify-content: flex-end;
-            flex: 1;
             margin: 0;
             padding: 0;
         }
@@ -106,6 +106,7 @@
             padding: 0;
             align-items: center;
             justify-content: flex-end;
+            gap: 0;
         }
 
         .main-nav ul li {
@@ -117,13 +118,13 @@
             color: #333;
             text-decoration: none;
             font-weight: 600;
-            padding: 10px 16px;
+            padding: 12px 18px;
             border-radius: 20px;
             transition: all 0.3s ease;
             border: 2px solid transparent;
             font-size: 14px;
             white-space: nowrap;
-            margin: 0 5px;
+            margin: 0;
         }
 
         .main-nav ul li a:hover {
@@ -131,16 +132,15 @@
             color: white;
         }
 
-        /* MOBILE MENU BUTTON */
+        /* MOBILE MENU BUTTON - LARGER */
         .menu-toggle {
             display: none;
             background: none;
             border: none;
-            font-size: 24px;
             cursor: pointer;
             color: #333;
-            padding: 8px 12px;
-            border-radius: 8px;
+            padding: 0;
+            border-radius: 6px;
             transition: all 0.3s ease;
             flex-shrink: 0;
             margin: 0;
@@ -150,28 +150,53 @@
             background: #f0f0f0;
         }
 
-        /* ===== MOBILE RESPONSIVE ===== */
-        @media (max-width: 1024px) {
+        /* ===== DESKTOP ===== */
+        @media (min-width: 1025px) {
+            .header-content {
+                padding: 10px 15px;
+            }
+            
+            .logo img {
+                width: 144.4px;
+                height: 48px;
+            }
+            
             .book-now-button {
-                padding: 10px 20px;
+                padding: 12px 24px;
+                font-size: 15px;
+            }
+            
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        /* ===== TABLET ===== */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .header-content {
+                padding: 8px 10px;
+            }
+            
+            .logo img {
+                width: 140px;
+                height: 46px;
+            }
+            
+            .book-now-button {
+                padding: 11px 20px;
                 font-size: 14px;
             }
             
             .main-nav ul li a {
-                padding: 8px 14px;
+                padding: 10px 14px;
                 font-size: 13px;
             }
         }
 
-        /* MOBILE LAYOUT */
-        @media (max-width: 768px) {
+        /* ===== MOBILE 415px - 768px ===== */
+        @media (max-width: 768px) and (min-width: 415px) {
             .header-content {
-                padding: 0 5px;
-            }
-            
-            .logo {
-                width: 130px;
-                height: 43px;
+                padding: 6px 8px;
             }
             
             .logo img {
@@ -180,58 +205,54 @@
             }
             
             .book-now-button {
-                padding: 10px 16px;
-                font-size: 13px;
-                border-radius: 20px;
-                margin: 0 5px;
-            }
-            
-            .menu-toggle {
-                display: block;
-                font-size: 20px;
-                padding: 6px 10px;
+                padding: 12px 18px;
+                font-size: 14px;
             }
             
             .main-nav {
                 display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-                padding: 12px;
-                border-top: 2px solid #1a2a6c;
             }
             
-            .main-nav.active {
+            .menu-toggle {
                 display: block;
+                font-size: 24px;
+                padding: 10px 14px;
+            }
+        }
+
+        /* ===== SPECIFIC FOR 355px - 414px - LARGER ELEMENTS ===== */
+        @media (max-width: 414px) and (min-width: 355px) {
+            .header-content {
+                padding: 8px 6px;
+                justify-content: space-between;
             }
             
-            .main-nav ul {
-                flex-direction: column;
-                width: 100%;
+            .logo img {
+                width: 140px;
+                height: 46px;
             }
             
-            .main-nav ul li {
-                width: 100%;
-            }
-            
-            .main-nav ul li a {
-                display: block;
-                text-align: center;
-                padding: 12px;
+            .book-now-button {
+                padding: 14px 20px;
                 font-size: 14px;
-                border: 2px solid #f0f0f0;
-                margin: 2px 0;
+                border-radius: 22px;
+            }
+            
+            .main-nav {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+                font-size: 26px;
+                padding: 12px 16px;
             }
         }
 
-        /* SPECIFIC OPTIMIZATION FOR 365px - 414px */
-        @media (max-width: 414px) and (min-width: 365px) {
-            .logo {
-                width: 120px;
-                height: 40px;
+        /* ===== SMALLER MOBILE ===== */
+        @media (max-width: 354px) {
+            .header-content {
+                padding: 6px 4px;
             }
             
             .logo img {
@@ -240,39 +261,72 @@
             }
             
             .book-now-button {
-                padding: 8px 14px;
+                padding: 12px 16px;
+                font-size: 13px;
+                border-radius: 20px;
+            }
+            
+            .menu-toggle {
+                display: block;
+                font-size: 22px;
+                padding: 10px 14px;
+            }
+        }
+
+        /* ===== MOBILE MENU STYLES ===== */
+        .main-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            padding: 15px;
+            border-top: 2px solid #1a2a6c;
+        }
+
+        .main-nav.active {
+            display: block;
+        }
+
+        .main-nav ul {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .main-nav ul li {
+            width: 100%;
+        }
+
+        .main-nav ul li a {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            font-size: 16px;
+            border: 2px solid #f0f0f0;
+            margin: 3px 0;
+        }
+
+        /* ===== EXTRA SMALL SCREENS ===== */
+        @media (max-width: 320px) {
+            .header-content {
+                padding: 4px 3px;
+            }
+            
+            .logo img {
+                width: 110px;
+                height: 36px;
+            }
+            
+            .book-now-button {
+                padding: 10px 14px;
                 font-size: 12px;
-                border-radius: 18px;
-                margin: 0 3px;
             }
             
             .menu-toggle {
-                font-size: 18px;
-                padding: 5px 8px;
-            }
-        }
-
-        @media (max-width: 364px) {
-            .logo {
-                width: 110px;
-                height: 36px;
-            }
-            
-            .logo img {
-                width: 110px;
-                height: 36px;
-            }
-            
-            .book-now-button {
-                padding: 7px 12px;
-                font-size: 11px;
-                border-radius: 16px;
-                margin: 0 2px;
-            }
-            
-            .menu-toggle {
-                font-size: 16px;
-                padding: 4px 6px;
+                font-size: 20px;
+                padding: 8px 12px;
             }
         }
     </style>
@@ -288,7 +342,7 @@
                 
                 <!-- Book Now Button - Rainbow Gradient -->
                 <a href="tv-repair-near-me.html" class="book-now-button">
-                    📺 Book Repair Now
+                    📺 Book Now
                 </a>
                 
                 <!-- Menu Toggle Button -->
