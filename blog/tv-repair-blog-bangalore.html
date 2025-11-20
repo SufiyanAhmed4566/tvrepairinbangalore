@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Repair Blog - Expert Guides & Solutions | Bangalore</title>
+    <meta name="description" content="Complete TV repair guides for Bangalore. Brand-specific repairs, common issues, area services, and TV type solutions.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 25px 15px;
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DDA0DD, #98D8C8);
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+            position: relative;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .category-section {
+            margin-bottom: 25px;
+        }
+        
+        .category-title {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1);
+            color: white;
+            padding: 18px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .blog-link {
+            display: block;
+            background: white;
+            padding: 20px 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DDA0DD, #98D8C8);
+            opacity: 0.1;
+            transition: left 0.3s ease;
+        }
+        
+        .blog-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border-color: #4ECDC4;
+        }
+        
+        .blog-link:hover::before {
+            left: 0;
+        }
+        
+        .home-button {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DDA0DD, #98D8C8);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: none;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 480px) {
+            .links-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            
+            .blog-link {
+                padding: 15px 10px;
+                font-size: 12px;
+                min-height: 70px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .category-title {
+                font-size: 18px;
+                padding: 15px;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .links-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1200px;
+                padding: 30px;
+            }
+            
+            .links-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .blog-link {
+                padding: 25px 20px;
+                font-size: 15px;
+                min-height: 90px;
+            }
+            
+            .header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- Include Header -->
+    <script>
+        fetch('/partials/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('afterbegin', data);
+            });
+    </script>
+
+    
+    <div class="container">
+        <div class="header">
+            <h1>📺 TV Repair Blog</h1>
+            <p>Expert Guides & Solutions for Bangalore</p>
+        </div>
+
+        <!-- Brand Specific Guides -->
+        <div class="category-section">
+            <div class="category-title">🔧 Brand Specific Repairs</div>
+            <div class="links-grid">
+                <a href="brand-specific/samsung-tv-repair-in-bangalore.html" class="blog-link">Samsung TV Repair</a>
+                <a href="brand-specific/lg-tv-repair-in-bangalore.html" class="blog-link">LG TV Repair</a>
+                <a href="brand-specific/sony-tv-repair-in-bangalore.html" class="blog-link">Sony TV Repair</a>
+                <a href="brand-specific/mi-tv-repair-in-bangalore.html" class="blog-link">Mi TV Repair</a>
+                <a href="brand-specific/oneplus-tv-repair-in-bangalore.html" class="blog-link">OnePlus TV Repair</a>
+                <a href="brand-specific/panasonic-tv-repair-in-bangalore.html" class="blog-link">Panasonic TV Repair</a>
+                <a href="brand-specific/vu-tv-repair-in-bangalore.html" class="blog-link">Vu TV Repair</a>
+                <a href="brand-specific/thomson-tv-repair-in-bangalore.html" class="blog-link">Thomson TV Repair</a>
+            </div>
+        </div>
+
+        <!-- Common Issues -->
+        <div class="category-section">
+            <div class="category-title">⚡ Common TV Problems</div>
+            <div class="links-grid">
+                <a href="issues-specific/tv-screen-replacement-in-bangalore.html" class="blog-link">Screen Replacement</a>
+                <a href="issues-specific/tv-sound-problems-in-bangalore.html" class="blog-link">Sound Problems</a>
+                <a href="issues-specific/tv-power-issues-in-bangalore.html" class="blog-link">Power Issues</a>
+                <a href="issues-specific/tv-remote-not-working-in-bangalore.html" class="blog-link">Remote Not Working</a>
+                <a href="issues-specific/tv-software-update-issues-in-bangalore.html" class="blog-link">Software Updates</a>
+                <a href="issues-specific/tv-backlight-problems-in-bangalore.html" class="blog-link">Backlight Problems</a>
+                <a href="issues-specific/tv-standby-light-blinking-in-bangalore.html" class="blog-link">Standby Light Blinking</a>
+                <a href="issues-specific/tv-wall-mounting-service-in-bangalore.html" class="blog-link">Wall Mounting Service</a>
+            </div>
+        </div>
+
+        <!-- Area Specific Services -->
+        <div class="category-section">
+            <div class="category-title">📍 Area Services in Bangalore</div>
+            <div class="links-grid">
+                <a href="area-specific/tv-repair-in-whitefield.html" class="blog-link">Whitefield</a>
+                <a href="area-specific/tv-repair-in-koramangala.html" class="blog-link">Koramangala</a>
+                <a href="area-specific/tv-repair-in-indiranagar.html" class="blog-link">Indiranagar</a>
+                <a href="area-specific/tv-repair-in-marathahalli.html" class="blog-link">Marathahalli</a>
+                <a href="area-specific/tv-repair-in-jayanagar.html" class="blog-link">Jayanagar</a>
+                <a href="area-specific/tv-repair-in-btm-layout.html" class="blog-link">BTM Layout</a>
+                <a href="area-specific/tv-repair-in-bannerghatta-road.html" class="blog-link">Bannerghatta Road</a>
+                <a href="area-specific/tv-repair-in-electronic-city.html" class="blog-link">Electronic City</a>
+                <a href="area-specific/tv-repair-in-hsr-layout.html" class="blog-link">HSR Layout</a>
+                <a href="area-specific/tv-repair-in-bellandur.html" class="blog-link">Bellandur</a>
+                <a href="area-specific/tv-repair-in-sarjapur-road.html" class="blog-link">Sarjapur Road</a>
+                <a href="area-specific/tv-repair-in-rajajinagar.html" class="blog-link">Rajajinagar</a>
+                <a href="area-specific/tv-repair-in-malleswaram.html" class="blog-link">Malleswaram</a>
+                <a href="area-specific/tv-repair-in-yelahanka.html" class="blog-link">Yelahanka</a>
+            </div>
+        </div>
+
+        <!-- TV Type Guides -->
+        <div class="category-section">
+            <div class="category-title">📱 TV Type Guides</div>
+            <div class="links-grid">
+                <a href="tv-type-specific/led-tv-repair-in-bangalore.html" class="blog-link">LED TV Repair</a>
+                <a href="tv-type-specific/smart-tv-repair-in-bangalore.html" class="blog-link">Smart TV Repair</a>
+                <a href="tv-type-specific/android-tv-repair-in-bangalore.html" class="blog-link">Android TV Repair</a>
+                <a href="tv-type-specific/lcd-tv-repair-in-bangalore.html" class="blog-link">LCD TV Repair</a>
+                <a href="tv-type-specific/oled-tv-repair-in-bangalore.html" class="blog-link">OLED TV Repair</a>
+                <a href="tv-type-specific/4k-ultra-hd-tv-repair-in-bangalore.html" class="blog-link">4K Ultra HD TV Repair</a>
+            </div>
+        </div>
+
+        <a href="../index.html" class="home-button">🏠 Back to Home</a>
+    </div>
+</body>
+</html>
