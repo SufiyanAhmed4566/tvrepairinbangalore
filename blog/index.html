@@ -18,12 +18,14 @@
             color: #333;
             background: #f9f9f9;
             min-height: 100vh;
+            /* REMOVED padding-top: 70px */
         }
         
         .container {
             max-width: 100%;
             margin: 0 auto;
             padding: 15px;
+
         }
         
         .header {
@@ -36,7 +38,6 @@
             color: white;
             position: relative;
             overflow: hidden;
-            margin-top: 20px;
         }
         
         .header::before {
@@ -155,6 +156,8 @@
         
         /* Mobile responsive */
         @media (max-width: 480px) {
+            /* REMOVED body padding-top for mobile too */
+            
             .links-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 12px;
@@ -207,15 +210,51 @@
     </style>
 </head>
 <body>
-     <!-- Include Header -->
+    <div id="header-container"></div>
+
     <script>
+        // Load header
         fetch('/partials/header.html')
             .then(response => response.text())
             .then(data => {
-                document.body.insertAdjacentHTML('afterbegin', data);
+                document.getElementById('header-container').innerHTML = data;
+                initializeMenu();
             });
-    </script>
 
+        // Initialize menu functionality
+        function initializeMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const closeMenu = document.querySelector('.close-menu');
+            const mainNav = document.querySelector('.main-nav');
+            const navLinks = document.querySelectorAll('.main-nav ul li a');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function() {
+                    mainNav.classList.add('active');
+                });
+
+                if (closeMenu) {
+                    closeMenu.addEventListener('click', function() {
+                        mainNav.classList.remove('active');
+                    });
+                }
+
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mainNav.classList.remove('active');
+                    });
+                });
+
+                document.addEventListener('click', function(event) {
+                    if (mainNav.classList.contains('active') && 
+                        !mainNav.contains(event.target) && 
+                        !menuToggle.contains(event.target)) {
+                        mainNav.classList.remove('active');
+                    }
+                });
+            }
+        }
+    </script>
     
     <div class="container">
         <div class="header">
@@ -288,6 +327,6 @@
         </div>
 
         <a href="../index.html" class="home-button">🏠 Back to Home</a>
-    </div>
+    </div>  
 </body>
 </html>
