@@ -16,6 +16,9 @@
             
             <!-- Main Navigation -->
             <nav class="main-nav">
+                <div class="mobile-menu-header">
+                    <span class="close-menu">✕</span>
+                </div>
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/tv-repair-near-me.html">Book TV Repair Now</a></li>
@@ -268,9 +271,9 @@
         right: 0;
         bottom: 0;
         width: 280px;
-        background: white;
+        background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DDA0DD, #98D8C8);
         box-shadow: -4px 0 15px rgba(0,0,0,0.15);
-        padding: 80px 20px 20px 20px;
+        padding: 20px;
         z-index: 9999;
         overflow-y: auto;
         transform: translateX(100%);
@@ -290,6 +293,7 @@
         flex-direction: column;
         width: 100%;
         gap: 10px;
+        margin-top: 50px;
     }
 
     .main-nav.active ul li {
@@ -301,28 +305,53 @@
         text-align: left;
         padding: 15px;
         font-size: 16px;
-        border: 2px solid #f0f0f0;
+        border: 2px solid rgba(255,255,255,0.3);
         border-radius: 10px;
         margin: 0;
         transition: all 0.3s ease;
+        background: rgba(255,255,255,0.95);
+        color: #333;
+        font-weight: 600;
     }
 
     .main-nav.active ul li a:hover {
-        background: linear-gradient(135deg, #1a2a6c, #b21f1f);
-        color: white;
-        border-color: #1a2a6c;
+        background: white;
+        transform: translateX(5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    /* Close button for mobile menu */
-    .main-nav.active::before {
-        content: '✕';
+    /* Mobile menu header with close button */
+    .mobile-menu-header {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background: rgba(255,255,255,0.95);
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 15px;
+    }
+
+    .main-nav.active .mobile-menu-header {
+        display: flex;
+    }
+
+    .close-menu {
         font-size: 24px;
         color: #333;
         cursor: pointer;
-        z-index: 10000;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        background: rgba(255,255,255,0.9);
+    }
+
+    .close-menu:hover {
+        background: white;
+        transform: scale(1.1);
     }
 
     /* ===== EXTRA SMALL SCREENS ===== */
@@ -355,21 +384,29 @@
 <script>
     // Mobile menu toggle
     document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('.main-nav').classList.toggle('active');
+        document.querySelector('.main-nav').classList.add('active');
     });
     
-    // Close menu when clicking outside or on close button
+    // Close menu when clicking on close button
+    document.querySelector('.close-menu').addEventListener('click', function() {
+        document.querySelector('.main-nav').classList.remove('active');
+    });
+    
+    // Close menu when clicking on menu links
+    document.querySelectorAll('.main-nav ul li a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.remove('active');
+        });
+    });
+    
+    // Close menu when clicking outside
     document.addEventListener('click', function(event) {
         const nav = document.querySelector('.main-nav');
         const toggle = document.querySelector('.menu-toggle');
         
-        // Close when clicking outside
-        if (!nav.contains(event.target) && !toggle.contains(event.target)) {
-            nav.classList.remove('active');
-        }
-        
-        // Close when clicking on the X button
-        if (event.target === document.querySelector('.main-nav.active::before')) {
+        if (nav.classList.contains('active') && 
+            !nav.contains(event.target) && 
+            !toggle.contains(event.target)) {
             nav.classList.remove('active');
         }
     });
