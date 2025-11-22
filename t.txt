@@ -1,0 +1,52 @@
+tv1:
+Crop options
+Width (px)
+894
+Height (px)
+608
+Position X (px)
+62
+Position Y (px)
+208
+
+tv3:
+Width (px)
+819
+Height (px)
+565
+Position X (px)
+102
+Position Y (px)
+229
+
+tv2:
+Width (px)
+982
+Height (px)
+739
+Position X (px)
+20
+Position Y (px)
+155
+
+tv5:
+Crop options
+Width (px)
+892
+Height (px)
+605
+Position X (px)
+66
+Position Y (px)
+238
+
+tv4:
+Crop options
+Width (px)
+922
+Height (px)
+641
+Position X (px)
+53
+Position Y (px)
+206
