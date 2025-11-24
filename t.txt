@@ -1,52 +1,171 @@
-tv1:
-Crop options
-Width (px)
-894
-Height (px)
-608
-Position X (px)
-62
-Position Y (px)
-208
+function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+    var ss = SpreadsheetApp.openById("1lVQLHn6KyOINkwZ4E4VXL4vCNQPBBoB-cqt7YQY6H_4");
+    var usersSheet = ss.getSheetByName("Users");
+    var detailsSheet = ss.getSheetByName("UserDetails");
 
-tv3:
-Width (px)
-819
-Height (px)
-565
-Position X (px)
-102
-Position Y (px)
-229
+    // === Format DateTime ===
+    var now = new Date();
+    var formattedTime = Utilities.formatDate(now, Session.getScriptTimeZone(), "dd-MMM-yyyy, hh:mm a");
 
-tv2:
-Width (px)
-982
-Height (px)
-739
-Position X (px)
-20
-Position Y (px)
-155
+    // === Ensure headers exist ===
+    if (usersSheet.getLastRow() === 0) {
+      usersSheet.appendRow(["user_id", "name", "phone", "created_at", "submit_count"]);
+    }
+    if (detailsSheet.getLastRow() === 0) {
+      detailsSheet.appendRow(["submit_id", "submitted_at", "user_id", "name", "phone", "brand", "type", "timeSlot", "area"]);
+    }
 
-tv5:
-Crop options
-Width (px)
-892
-Height (px)
-605
-Position X (px)
-66
-Position Y (px)
-238
+    // === Normalize phone number ===
+    var inputPhone = ("" + data.phone).trim().replace(/\D/g, ''); // Remove non-digit characters
 
-tv4:
-Crop options
-Width (px)
-922
-Height (px)
-641
-Position X (px)
-53
-Position Y (px)
-206
+    // === Check if phone exists in Users sheet ===
+    var usersLastRow = usersSheet.getLastRow();
+    var userExists = false;
+    var userId, userRow, currentSubmitCount = 0;
+
+    if (usersLastRow > 1) {
+      var usersData = usersSheet.getRange(2, 1, usersLastRow - 1, usersSheet.getLastColumn()).getValues();
+      
+      for (var i = 0; i < usersData.length; i++) {
+        var sheetPhone = ("" + usersData[i][2]).trim().replace(/\D/g, ''); // Normalize phone from sheet
+        if (sheetPhone === inputPhone) {
+          userExists = true;
+          userId = usersData[i][0];   // Column A → user_id
+          userRow = i + 2;            // Actual row in sheet
+          currentSubmitCount = usersData[i][4] || 0; // Column E → submit_count
+          break;
+        }
+      }
+    }
+
+    // === Create new user if phone not found ===
+    if (!userExists) {
+      // Count actual data rows (excluding header) for user ID generation
+      var actualUserCount = Math.max(0, usersLastRow - 1);
+      var newUserId = "user" + (100 + actualUserCount + 1);
+      
+      usersSheet.appendRow([
+        newUserId, 
+        data.name, 
+        inputPhone, 
+        formattedTime, 
+        1  // Start with submit_count = 1
+      ]);
+      
+      userId = newUserId;
+      currentSubmitCount = 1;
+      
+    } else {
+      // === For existing user: increment submit_count ===
+      currentSubmitCount = currentSubmitCount + 1;
+      usersSheet.getRange(userRow, 5).setValue(currentSubmitCount);
+    }
+
+    // === Add submission to UserDetails ===
+    var detailsLastRow = detailsSheet.getLastRow();
+    var actualDetailsCount = Math.max(0, detailsLastRow - 1);
+    var newSubmitId = "sub" + (100 + actualDetailsCount + 1);
+    
+    detailsSheet.appendRow([
+      newSubmitId,
+      formattedTime,
+      userId,
+      data.name,
+      inputPhone,
+      data.brand || "",
+      data.type || "",
+      data.timeSlot || "",
+      data.area || ""
+    ]);
+
+    return ContentService.createTextOutput(JSON.stringify({
+      result: "success",
+      message: userExists ? "Existing user - submission added" : "New user created",
+      userId: userId,
+      submitId: newSubmitId,
+      isNewUser: !userExists,
+      submissionCount: currentSubmitCount
+    })).setMimeType(ContentService.MimeType.JSON);
+
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({
+      result: "error",
+      message: error.toString()
+    })).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+
+
+
+function doPost(e) {
+  var data = e.parameter;
+  var now = new Date();
+
+  // Format date & unique short ID
+  var dateStr = Utilities.formatDate(now, "Asia/Kolkata", "dd MMM yyyy, hh:mm:ss a");
+  var dayLabel = Utilities.formatDate(now, "Asia/Kolkata", "dd MMM yyyy");
+  var leadId = Math.random().toString(36).substring(2, 6).toUpperCase();
+
+  // Subject (same for all leads of the same day → goes into one thread)
+  var subject = "📅 FixMyWasher Leads - " + dayLabel;
+
+  // HTML email message
+  var htmlMessage = `
+    <html>
+      <body style="font-family: Arial, sans-serif; background-color:#f4f6f8; padding:20px;">
+        <div style="max-width:520px; margin:auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08);">
+          
+          <h3 style="color:#1565c0; text-align:center; margin-bottom:8px;">
+            🆔 ${leadId} — 🧰 New Washing Machine Repair Lead
+          </h3>
+
+          <p style="color:#555; text-align:center; font-size:13px; margin-top:0;">
+            You’ve received a new customer request from your FixMyWasher website.
+          </p>
+
+          <table border="0" cellpadding="8" cellspacing="0" style="width:100%; font-size:14px; border-collapse:collapse; color:#333;">
+            <tr><th align="left" style="background:#f7f9fc; width:40%;">👤 <b>Name</b></th><td style="font-weight:bold;">${data.name || '-'}</td></tr>
+            <tr><th align="left" style="background:#f7f9fc;">📞 <b>Phone</b></th><td style="font-weight:bold;"><a href="tel:${data.phone || ''}" style="color:#1976d2; text-decoration:none;">${data.phone || '-'}</a></td></tr>
+            <tr><th align="left" style="background:#f7f9fc;">🏷️ <b>Brand</b></th><td style="font-weight:bold;">${data.brand || '-'}</td></tr>
+            <tr><th align="left" style="background:#f7f9fc;">⚙️ <b>Machine Type</b></th><td style="font-weight:bold;">${data.type || '-'}</td></tr>
+            <tr><th align="left" style="background:#f7f9fc;">⏰ <b>Preferred Time</b></th><td style="font-weight:bold;">${data.timeSlot || '-'}</td></tr>
+            <tr><th align="left" style="background:#f7f9fc;">📍 <b>Area</b></th><td style="font-weight:bold;">${data.area || '-'}</td></tr>
+            <tr><th align="left" style="background:#f7f9fc;">🕒 <b>Submission Time</b></th><td style="font-weight:bold;">${dateStr}</td></tr>
+          </table>
+
+          <p style="color:#999; font-size:11px; text-align:center; margin-top:12px;">
+            📩 This lead was submitted via your <b>FixMyWasher</b> website form.
+          </p>
+        </div>
+      </body>
+    </html>
+  `;
+
+  // Send to both recipients (same thread per day)
+  var recipients = ["artisanapplianceservice@gmail.com", "ahmedsufi575@gmail.com"];
+  for (var i = 0; i < recipients.length; i++) {
+    MailApp.sendEmail({
+      to: recipients[i],
+      subject: subject,
+      name: "🧰 FixMyWasher",
+      htmlBody: htmlMessage,
+      replyTo: "FixMyWasher 🧰 <artisanapplianceservice@gmail.com>",
+    });
+  }
+
+  return ContentService.createTextOutput("OK").setMimeType(ContentService.MimeType.TEXT);
+}
+
+
+No Power / TV not turning on
+
+Screen problems (flickering, lines, dead pixels, or black screen)
+
+Sound issues (no audio, distorted sound, or low volume)
+
+Remote / control not working properly
+
+Connectivity issues (HDMI, Wi-Fi, or apps not loading)
