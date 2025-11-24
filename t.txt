@@ -159,13 +159,17 @@ function doPost(e) {
   return ContentService.createTextOutput("OK").setMimeType(ContentService.MimeType.TEXT);
 }
 
+1️⃣ TV Not Turning On – No power, TV completely dead
+2️⃣ Display Problem – Screen blank, lines on screen, picture not visible
+3️⃣ Sound Problem – No sound or sound not clear
+4️⃣ Remote / Buttons Not Working – Remote not responding or TV buttons not working
+5️⃣ Wi-Fi / Connection Issue – Internet not working, HDMI not detecting, apps not opening
+6️⃣ Screen Broken / Physical Damage – Screen cracked or damaged due to fall
 
-No Power / TV not turning on
-
-Screen problems (flickering, lines, dead pixels, or black screen)
-
-Sound issues (no audio, distorted sound, or low volume)
-
-Remote / control not working properly
-
-Connectivity issues (HDMI, Wi-Fi, or apps not loading)
+LED TV ( most common )
+LCD TV 
+OLED TV / QLED TV
+Android TV /Smart TV
+4K TV / HD TV
+Curved TV 
+NO idea no worries 
