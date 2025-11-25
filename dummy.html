@@ -207,8 +207,7 @@
         </div>
     </header>
 
-
-       /* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
         footer {
             background: linear-gradient(135deg, var(--primary-color), #2d4a8c);
             color: white;
@@ -295,7 +294,14 @@
             color: rgba(255,255,255,0.8);
         }
 
-       <!-- ===== FOOTER ===== -->
+        /* Special rule only for screens between 355px and 414px */
+@media (max-width: 450px) and (min-width: 320px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+}
+     <!-- ===== FOOTER SECTION ===== -->
     <footer>
         <div class="container">
             <div class="footer-contact">

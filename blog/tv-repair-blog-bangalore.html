@@ -841,6 +841,15 @@ footer {
     }
 }
 
+/* Special rule only for screens between 355px and 414px */
+@media (max-width: 450px) and (min-width: 320px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+}
+
+
         
     </style>
 </head>

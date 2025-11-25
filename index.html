@@ -689,6 +689,14 @@
             color: rgba(255,255,255,0.8);
         }
 
+        /* Special rule only for screens between 355px and 414px */
+@media (max-width: 450px) and (min-width: 320px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+}
+
         /* ===== RESPONSIVE DESIGN ===== */
         @media (min-width: 769px) {
             .header-content {
