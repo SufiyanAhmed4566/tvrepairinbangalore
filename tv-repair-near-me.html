@@ -287,13 +287,59 @@
             color: white;
             margin-bottom: 0px;
             width: 100%;
-            padding:0px;
+            padding: 15px 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .booking-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+            z-index: 1;
         }
 
         .booking-hero h1 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 6px;
+        }
+
+        .booking-hero p {
+            font-size: 0.85rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
             line-height: 1.3;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-feature {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
         }
 
         /* ===== BOOKING FORM SECTION ===== */
@@ -314,19 +360,33 @@
         .form-container {
             background: #fff;
             padding: 20px 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
             width: 100%;
             position: relative;
-            min-height: 500px;
+            min-height: 450px;
             display: flex;
             flex-direction: column;
-            
+            border: 1px solid rgba(255,255,255,0.2);
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--gradient-rainbow);
         }
 
         .form-header {
             text-align: center;
             margin-bottom: 20px;
+            position: relative;
         }
 
         .form-header h2 {
@@ -334,18 +394,23 @@
             font-size: 1.4rem;
             margin-bottom: 8px;
             line-height: 1.3;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
         }
 
         .form-header p {
             color: #666;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.4;
         }
 
         .booking-form {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
             width: 100%;
             transition: all 0.5s ease;
             flex: 1;
@@ -359,13 +424,17 @@
             display: flex;
             flex-direction: column;
             width: 100%;
+            position: relative;
         }
 
         .form-group label {
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 6px;
-            color: #333;
-            font-size: 0.95rem;
+            color: #444;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .form-group input,
@@ -374,18 +443,19 @@
             width: 100%;
             padding: 14px 12px;
             border: 2px solid #e1e5e9;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 16px;
             transition: all 0.3s ease;
             background: white;
             -webkit-appearance: none;
             appearance: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .form-group select {
             background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
             background-repeat: no-repeat;
-            background-position: right 12px center;
+            background-position: right 14px center;
             background-size: 12px;
             padding-right: 40px;
         }
@@ -395,12 +465,13 @@
         .form-group select:focus {
             outline: none;
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(26, 42, 108, 0.1);
+            box-shadow: 0 0 0 3px rgba(26, 42, 108, 0.15), 0 4px 10px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 90px;
+            min-height: 80px;
         }
 
         .submit-btn {
@@ -408,20 +479,33 @@
             color: white;
             padding: 16px 20px;
             border: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 10px;
+            margin-top: 12px;
             width: 100%;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
         }
 
         .submit-btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
+            transform: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .submit-btn::after {
@@ -461,22 +545,24 @@
         .error-message {
             color: var(--error-color);
             font-size: 0.8rem;
-            margin-top: 4px;
+            margin-top: 5px;
             display: none;
+            font-weight: 600;
         }
 
         .form-group.error input,
         .form-group.error select,
         .form-group.error textarea {
             border-color: var(--error-color);
+            box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.15);
         }
 
         /* ===== SUCCESS MESSAGE ===== */
         .success-message {
             background: linear-gradient(135deg, var(--success-color), #45a049);
             color: white;
-            padding: 40px 20px;
-            border-radius: 12px;
+            padding: 30px 20px;
+            border-radius: 16px;
             text-align: center;
             display: none;
             width: 100%;
@@ -484,10 +570,24 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            transform: scale(0.8);
+            transform: scale(0.9);
             opacity: 0;
             transition: all 0.5s ease;
-            min-height: 400px;
+            min-height: 350px;
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .success-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.1);
+            z-index: 1;
         }
 
         .success-message.show {
@@ -497,11 +597,11 @@
 
         @keyframes successReveal {
             0% {
-                transform: scale(0.8);
+                transform: scale(0.9);
                 opacity: 0;
             }
             70% {
-                transform: scale(1.05);
+                transform: scale(1.02);
                 opacity: 1;
             }
             100% {
@@ -512,8 +612,11 @@
 
         .success-icon {
             font-size: 4rem;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             animation: bounce 1s ease;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
         }
 
         @keyframes bounce {
@@ -529,30 +632,33 @@
         }
 
         .success-message h3 {
-            font-size: 1.6rem;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             line-height: 1.3;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
 
         .success-message p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            opacity: 0.9;
-            line-height: 1.5;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            opacity: 0.95;
+            line-height: 1.4;
             max-width: 90%;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            position: relative;
+            z-index: 2;
+            font-weight: 500;
         }
 
         /* ===== BENEFITS SIDEBAR ===== */
         .benefits-sidebar {
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
             padding: 20px 15px;
-            border-radius: 12px;
+            border-radius: 16px;
             width: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.5);
         }
 
         .benefits-sidebar h3 {
@@ -561,6 +667,7 @@
             font-size: 1.3rem;
             text-align: center;
             line-height: 1.3;
+            font-weight: 700;
         }
 
         .benefits-grid {
@@ -576,36 +683,64 @@
             gap: 10px;
             padding: 12px;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
             min-height: 80px;
             width: 100%;
             transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            background: linear-gradient(135deg, #ffffff, #fafbfc);
         }
 
         .benefit-item:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+            border-left: 4px solid;
+            border-image: var(--gradient-rainbow) 1;
         }
 
-        .benefit-icon {
-            font-size: 18px;
-            color: var(--primary-color);
-            flex-shrink: 0;
-            margin-top: 2px;
+       .benefit-icon {
+  font-size: 23px; /* keep emoji size */
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(45deg,
+    #FF6B6B, #4ECDC4, #45B7D1,
+    #96CEB4, #FFEAA7, #DDA0DD, #98D8C8);
+  background-size: 100% 100%;   /* force gradient to fit fully */
+  background-position: center;  /* center inside glyph */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+        .benefit-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
         }
 
         .benefit-content h4 {
             color: #333;
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             font-size: 0.9rem;
-            line-height: 1.3;
+            line-height: 1.2;
+            font-weight: 700;
         }
 
         .benefit-content p {
             color: #666;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             line-height: 1.3;
+            margin: 0;
+            width: 100%;
         }
 
         /* ===== TRUST BADGES ===== */
@@ -615,29 +750,229 @@
             gap: 15px;
             margin-top: 30px;
             padding: 20px 15px;
-            background: #f8f9fa;
-            border-radius: 12px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 16px;
             width: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .trust-badges h3 {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .trust-badge {
             text-align: center;
+            padding: 12px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .trust-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
         }
 
         .trust-badge .icon {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 8px;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding: 5px;
+            border-radius: 10px;
+            display: inline-block;
         }
 
         .trust-badge h4 {
             color: var(--primary-color);
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             font-size: 0.9rem;
+            font-weight: 700;
         }
 
         .trust-badge p {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #666;
+            margin: 0;
+        }
+
+        /* ===== NEW SECTIONS FOR SEO CONTENT ===== */
+        
+        /* Service Areas Section */
+        .service-areas {
+            padding: 30px 12px;
+            background: white;
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .service-areas h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .area-item {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .area-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+            background: var(--gradient-rainbow);
+            color: white;
+        }
+
+        .area-item h3 {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 30px 12px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px 18px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff, #fafbfc);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, #f0f0f0, #f5f5f5);
+        }
+
+        .faq-answer {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .faq-answer.active {
+            padding: 15px 18px;
+            max-height: 500px;
+        }
+
+        .faq-toggle {
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* SEO Content Section */
+        .seo-content {
+            padding: 30px 12px;
+            background: white;
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .seo-content h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .content-block {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .content-block h3 {
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .content-block p {
+            line-height: 1.5;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .content-block ul {
+            padding-left: 18px;
+            margin-bottom: 12px;
+        }
+
+        .content-block li {
+            margin-bottom: 6px;
+            line-height: 1.4;
+            font-size: 0.9rem;
         }
 
       /* ===== FOOTER STYLES ===== */
@@ -645,7 +980,7 @@ footer {
     background: linear-gradient(135deg, var(--primary-color), #2d4a8c);
     color: white;
     padding: 30px 12px 15px;
-    margin-top: 30px;
+    margin-top: 40px;
     width: 100%;
 }
 
@@ -692,17 +1027,22 @@ footer {
     align-items: center;
 }
 
+.footer-section ul li a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
 .footer-contact {
     background: rgba(255,255,255,0.1);
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 12px;
     margin-bottom: 15px;
 }
 
 .footer-contact h4 {
     color: #FFEAA7;
-    margin-bottom: 8px;
-    font-size: 0.95rem;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 .footer-contact p {
@@ -711,7 +1051,7 @@ footer {
 }
 
 .phone-number {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     font-weight: 700;
     color: #4ECDC4;
 }
@@ -720,7 +1060,7 @@ footer {
     text-align: center;
     padding-top: 15px;
     border-top: 1px solid rgba(255,255,255,0.2);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: rgba(255,255,255,0.8);
 }
 
@@ -728,7 +1068,15 @@ footer {
 @media (min-width: 768px) {
     .footer-grid {
         grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
+        gap: 25px;
+    }
+    
+    .areas-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -736,6 +1084,18 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 15px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .trust-badges {
+        grid-template-columns: 1fr;
+    }
+    
+    .areas-grid {
+        grid-template-columns: 1fr;
     }
 }        /* ===== RESPONSIVE DESIGN ===== */
         @media (min-width: 415px) {
@@ -745,17 +1105,25 @@ footer {
             }
             
             .booking-hero h1 {
-                font-size: 1.6rem;
+                font-size: 1.7rem;
+            }
+            
+            .booking-hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-feature {
+                font-size: 0.8rem;
             }
             
             .benefits-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: 15px;
+                gap: 12px;
             }
             
             .trust-badges {
                 grid-template-columns: repeat(4, 1fr);
-                gap: 20px;
+                gap: 15px;
             }
         }
 
@@ -767,20 +1135,21 @@ footer {
             
             .booking-container {
                 flex-direction: row;
-                gap: 30px;
+                gap: 25px;
             }
             
             .form-container {
                 flex: 1;
+                min-height: 420px;
             }
             
             .benefits-sidebar {
-                flex: 0 0 300px;
+                flex: 0 0 320px;
             }
             
             .footer-grid {
                 grid-template-columns: repeat(4, 1fr);
-                gap: 30px;
+                gap: 25px;
             }
             
             .header-content {
@@ -831,7 +1200,7 @@ footer {
             }
             
             .booking-hero {
-                padding: 20px 10px;
+                padding: 18px 10px;
             }
             
             .booking-hero h1 {
@@ -843,7 +1212,8 @@ footer {
             }
             
             .form-container {
-                padding: 15px 12px;
+                padding: 18px 15px;
+                min-height: 420px;
             }
             
             .form-header h2 {
@@ -851,7 +1221,7 @@ footer {
             }
             
             .benefits-sidebar {
-                padding: 15px 12px;
+                padding: 18px 15px;
             }
             
             .benefit-item {
@@ -862,11 +1232,11 @@ footer {
             .trust-badges {
                 grid-template-columns: 1fr 1fr;
                 gap: 12px;
-                padding: 15px 12px;
+                padding: 18px 15px;
             }
             
             .trust-badge .icon {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
         }
 
@@ -938,7 +1308,14 @@ footer {
         <!-- ===== BOOKING HERO SECTION ===== -->
         <section class="booking-hero">
             <div class="container">
-                <h1>📺 Book TV Repair Service in Bangalore</h1>
+                <h1>📺 TV Repair Service in Bangalore</h1>
+                <p>Same-Day Doorstep Service | 1-Year Warranty | Expert Technicians</p>
+                <div class="hero-features">
+                    <div class="hero-feature">🚀 60 Min Service</div>
+                    <div class="hero-feature">🛡️ 1 Year Warranty</div>
+                    <div class="hero-feature">⚡ Quick Booking</div>
+                    <div class="hero-feature">📅 Same Day</div>
+                </div>
             </div>
         </section>
 
@@ -953,7 +1330,7 @@ footer {
                             <p>Tell us about your TV problem and we'll send help right away</p>
                         </div>
                         
-                        <form id="repairForm" class="booking-form" autocomplete="off">
+                        <form id="repairForm" class="booking-form" autocomplete="on" novalidate>
                             <input type="hidden" name="formType" value="tv">
 
                             <div class="form-group">
@@ -969,8 +1346,8 @@ footer {
                             </div>
 
                             <div class="form-group">
-                                <label for="tv_type">What type of TV do you have? 📺</label>
-                                <select id="tv_type" name="tv_type">
+                                <label for="tv_type" class="required">What type of TV do you have? 📺</label>
+                                <select id="tv_type" name="tv_type" required>
                                     <option value="">Select your TV type</option>
                                     <option value="LED TV">LED TV (Most Common)</option>
                                     <option value="LCD TV">LCD TV</option>
@@ -980,11 +1357,12 @@ footer {
                                     <option value="Curved TV">Curved TV</option>
                                     <option value="No idea / Not sure">No idea - No worries!</option>
                                 </select>
+                                <div class="error-message" id="tvTypeError"></div>
                             </div>
 
                             <div class="form-group">
-                                <label for="issue">What's happening with your TV? 🔍</label>
-                                <select id="issue" name="issue">
+                                <label for="issue" class="required">What's happening with your TV? 🔍</label>
+                                <select id="issue" name="issue" required>
                                     <option value="">Select the main issue</option>
                                     <option value="TV Not Turning On">1️⃣ TV Not Turning On – No power, TV completely dead</option>
                                     <option value="Display Problem">2️⃣ Display Problem – Screen blank, lines, picture not visible</option>
@@ -994,6 +1372,7 @@ footer {
                                     <option value="Screen Broken / Physical Damage">6️⃣ Screen Broken / Physical Damage – Cracked screen</option>
                                     <option value="Other Issue">7️⃣ Other Issue - No worries, we'll figure it out!</option>
                                 </select>
+                                <div class="error-message" id="issueError"></div>
                             </div>
 
                             <button type="submit" class="submit-btn" id="submitBtn">
@@ -1043,8 +1422,8 @@ footer {
                             <div class="benefit-item">
                                 <div class="benefit-icon">🛡️</div>
                                 <div class="benefit-content">
-                                    <h4>90-Day Warranty</h4>
-                                    <p>Complete 90 days service warranty on all repairs</p>
+                                    <h4>1-Year Warranty</h4>
+                                    <p>Complete 1 year service warranty on all repairs</p>
                                 </div>
                             </div>
 
@@ -1069,6 +1448,7 @@ footer {
 
                 <!-- Trust Badges -->
                 <div class="trust-badges">
+                    <h3>Why Customers Trust Us</h3>
                     <div class="trust-badge">
                         <div class="icon">🏆</div>
                         <h4>5000+ Repairs</h4>
@@ -1088,6 +1468,115 @@ footer {
                         <div class="icon">🔧</div>
                         <h4>Expert Team</h4>
                         <p>Certified Technicians</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICE AREAS SECTION ===== -->
+        <section class="service-areas">
+            <div class="container">
+                <h2>📍 We Serve All Areas Across Bangalore</h2>
+                <div class="areas-grid">
+                    <div class="area-item">
+                        <h3>Electronic City</h3>
+                    </div>
+                    <div class="area-item">
+                        <h3>Whitefield</h3>
+                    </div>
+                    <div class="area-item">
+                        <h3>Koramangala</h3>
+                    </div>
+                    <div class="area-item">
+                        <h3>Indiranagar</h3>
+                    </div>
+                    <div class="area-item">
+                        <h3>HSR Layout</h3>
+                    </div>
+                    <div class="area-item">
+                        <h3>Jayanagar</h3>
+                    </div>
+                    <div class="area-item">
+                        <h3>Marathahalli</h3>
+                    </div>
+                    <div class="area-item">
+                        <h3>BTM Layout</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ SECTION ===== -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>❓ Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How quickly can you repair my TV?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer same-day TV repair service in Bangalore. Our technicians typically reach within 2-4 hours of booking, and most common issues are fixed on the spot during the first visit itself.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you provide warranty on TV repairs?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We provide a comprehensive 1-year service warranty on all TV repairs. This covers both parts and labor, giving you complete peace of mind.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What TV brands do you repair?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We repair all major TV brands including Samsung, LG, Sony, MI, TCL, Vu, OnePlus, Philips, Panasonic, and many more. Our technicians are trained to handle all popular TV models.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How much does TV repair cost in Bangalore?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>TV repair costs vary based on the issue and TV model. We provide free diagnosis and transparent pricing before starting any repair work. Basic repairs start from ₹499, and we offer the best price guarantee.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEO CONTENT SECTION ===== -->
+        <section class="seo-content">
+            <div class="container">
+                <h2>📺 Professional TV Repair Services in Bangalore</h2>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>Expert TV Repair Services at Your Doorstep</h3>
+                        <p>Looking for reliable TV repair services in Bangalore? You've come to the right place! We specialize in providing professional, same-day TV repair solutions for all types of television sets. Whether your LED TV has display issues, your Smart TV won't connect to Wi-Fi, or your LCD TV has sound problems, our certified technicians have the expertise to fix it quickly and efficiently.</p>
+                        <p>Our doorstep TV repair service means you don't have to worry about transporting your heavy television to a service center. We come to your home or office with all necessary tools and genuine spare parts to diagnose and repair your TV on the spot.</p>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h3>Common TV Problems We Fix</h3>
+                        <p>Our experienced technicians can handle a wide range of TV issues:</p>
+                        <ul>
+                            <li><strong>TV Not Turning On:</strong> Power supply issues, motherboard problems, backlight failure</li>
+                            <li><strong>Display Problems:</strong> Blank screen, lines on screen, flickering, no picture</li>
+                            <li><strong>Sound Issues:</strong> No sound, distorted audio, volume problems</li>
+                            <li><strong>Connectivity Problems:</strong> HDMI not working, Wi-Fi connectivity issues</li>
+                            <li><strong>Remote Issues:</strong> Remote not working, buttons not responding</li>
+                            <li><strong>Physical Damage:</strong> Cracked screen replacement, TV stand repair</li>
+                        </ul>
+                        <p>No matter how complex the issue seems, our technicians have the skills and equipment to diagnose and fix it efficiently.</p>
                     </div>
                 </div>
             </div>
@@ -1161,8 +1650,12 @@ footer {
         const successMessage = document.getElementById('successMessage');
         const nameInput = document.getElementById('name');
         const phoneInput = document.getElementById('phone');
+        const tvTypeInput = document.getElementById('tv_type');
+        const issueInput = document.getElementById('issue');
         const nameError = document.getElementById('nameError');
         const phoneError = document.getElementById('phoneError');
+        const tvTypeError = document.getElementById('tvTypeError');
+        const issueError = document.getElementById('issueError');
 
         // Initialize GCLID tracking if present
         initializeGclidTracking();
@@ -1228,8 +1721,12 @@ footer {
             // Reset errors
             nameError.style.display = 'none';
             phoneError.style.display = 'none';
+            tvTypeError.style.display = 'none';
+            issueError.style.display = 'none';
             nameInput.classList.remove('error');
             phoneInput.classList.remove('error');
+            tvTypeInput.classList.remove('error');
+            issueInput.classList.remove('error');
 
             // Check name
             if (nameInput.value.trim() === '') {
@@ -1272,6 +1769,22 @@ footer {
                     phoneInput.classList.remove('error');
                     // No formatting needed for 10-digit numbers
                 }
+            }
+
+            // Check TV type
+            if (tvTypeInput.value === '') {
+                tvTypeError.style.display = 'block';
+                tvTypeError.textContent = 'Please select your TV type';
+                tvTypeInput.classList.add('error');
+                isValid = false;
+            }
+
+            // Check issue
+            if (issueInput.value === '') {
+                issueError.style.display = 'block';
+                issueError.textContent = 'Please select the issue with your TV';
+                issueInput.classList.add('error');
+                isValid = false;
             }
 
             return isValid;
@@ -1395,6 +1908,9 @@ footer {
         // Real-time validation
         nameInput.addEventListener('blur', validateForm);
         phoneInput.addEventListener('blur', validateForm);
+        tvTypeInput.addEventListener('blur', validateForm);
+        issueInput.addEventListener('blur', validateForm);
+        
         phoneInput.addEventListener('input', function() {
             // Remove error styling when user starts typing
             if (this.value.trim() !== '') {
@@ -1403,8 +1919,33 @@ footer {
             }
         });
 
-        // ========== MOBILE MENU FUNCTIONALITY ==========
+        // ========== FAQ FUNCTIONALITY ==========
         document.addEventListener('DOMContentLoaded', function() {
+            // FAQ toggle functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                        faqItem.querySelector('.faq-answer').classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.classList.add('active');
+                    }
+                });
+            });
+            
+            // Mobile menu functionality
             const menuToggle = document.querySelector('.menu-toggle');
             const closeMenu = document.querySelector('.close-menu');
             const mainNav = document.querySelector('.main-nav');
