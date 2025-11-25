@@ -53,7 +53,7 @@
         }
 
         .book-now-button {
-            background: var(--gradient-rainbow);
+            background: var(--gradient-rainbow) if --gradient-rainbow is not there than this linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DDA0DD, #98D8C8);
             color: white;
             padding: 12px 24px;
             border-radius: 25px;

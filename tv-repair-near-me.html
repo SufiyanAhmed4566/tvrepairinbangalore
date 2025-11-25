@@ -283,16 +283,15 @@
         /* ===== BOOKING HERO SECTION ===== */
         .booking-hero {
             background: var(--gradient-rainbow);
-            padding: 25px 12px;
             text-align: center;
             color: white;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             width: 100%;
+            padding:0px;
         }
 
         .booking-hero h1 {
             font-size: 1.5rem;
-            margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             line-height: 1.3;
         }
@@ -319,7 +318,10 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             width: 100%;
             position: relative;
-            overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            
         }
 
         .form-header {
@@ -346,15 +348,11 @@
             gap: 16px;
             width: 100%;
             transition: all 0.5s ease;
+            flex: 1;
         }
 
         .booking-form.hidden {
-            opacity: 0;
-            transform: translateY(-20px);
-            height: 0;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
+            display: none;
         }
 
         .form-group {
@@ -477,25 +475,19 @@
         .success-message {
             background: linear-gradient(135deg, var(--success-color), #45a049);
             color: white;
-            padding: 25px 20px;
+            padding: 40px 20px;
             border-radius: 12px;
             text-align: center;
-            margin-top: 0;
             display: none;
-            animation: fadeIn 0.5s ease;
             width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 10;
+            flex: 1;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             transform: scale(0.8);
             opacity: 0;
             transition: all 0.5s ease;
+            min-height: 400px;
         }
 
         .success-message.show {
@@ -519,8 +511,8 @@
         }
 
         .success-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            font-size: 4rem;
+            margin-bottom: 25px;
             animation: bounce 1s ease;
         }
 
@@ -529,24 +521,25 @@
                 transform: translateY(0);
             }
             40% {
-                transform: translateY(-10px);
+                transform: translateY(-15px);
             }
             60% {
-                transform: translateY(-5px);
+                transform: translateY(-7px);
             }
         }
 
         .success-message h3 {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
             line-height: 1.3;
         }
 
         .success-message p {
-            font-size: 0.95rem;
-            margin-bottom: 8px;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
             opacity: 0.9;
-            line-height: 1.4;
+            line-height: 1.5;
+            max-width: 90%;
         }
 
         @keyframes fadeIn {
@@ -1177,18 +1170,17 @@ footer {
         // ========== HELPER FUNCTIONS ==========
         
         function showSuccessMessage() {
-            // Hide the form with animation
+            // Hide the form completely
             form.classList.add('hidden');
             
             // Show success message with animation
-            setTimeout(() => {
-                successMessage.classList.add('show');
-            }, 300);
+            successMessage.classList.add('show');
             
             // Scroll to success message
             setTimeout(() => {
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 600);
+                const formContainer = document.querySelector('.form-container');
+                formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
         }
 
         function formDataToObject(formData) {
