@@ -173,3 +173,99 @@ Android TV /Smart TV
 4K TV / HD TV
 Curved TV 
 NO idea no worries 
+
+
+with this same content  and improve seo techniques in seo secction everthing create and change everthing with this page 
+┣ 📂blog
+ ┃ ┣ 📂brand-specific
+ ┃ ┃ ┣ 📜lg-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜mi-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜oneplus-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜panasonic-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜samsung-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜sony-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜thomson-tv-repair-in-bangalore.html
+ ┃ ┃ ┗ 📜vu-tv-repair-in-bangalore.html
+
+
+
+tvrepairinbangalore
+ ┣ 📂blog
+ ┃ ┣ 📂area-specific
+ ┃ ┃ ┣ 📜tv-repair-in-bannerghatta-road.html
+ ┃ ┃ ┣ 📜tv-repair-in-bellandur.html
+ ┃ ┃ ┣ 📜tv-repair-in-btm-layout.html
+ ┃ ┃ ┣ 📜tv-repair-in-electronic-city.html
+ ┃ ┃ ┣ 📜tv-repair-in-hsr-layout.html
+ ┃ ┃ ┣ 📜tv-repair-in-indiranagar.html
+ ┃ ┃ ┣ 📜tv-repair-in-jayanagar.html
+ ┃ ┃ ┣ 📜tv-repair-in-koramangala.html
+ ┃ ┃ ┣ 📜tv-repair-in-malleswaram.html
+ ┃ ┃ ┣ 📜tv-repair-in-marathahalli.html
+ ┃ ┃ ┣ 📜tv-repair-in-rajajinagar.html
+ ┃ ┃ ┣ 📜tv-repair-in-sarjapur-road.html
+ ┃ ┃ ┣ 📜tv-repair-in-whitefield.html
+ ┃ ┃ ┗ 📜tv-repair-in-yelahanka.html
+ ┃ ┣ 📂brand-specific
+ ┃ ┃ ┣ 📜lg-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜mi-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜oneplus-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜panasonic-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜samsung-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜sony-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜thomson-tv-repair-in-bangalore.html
+ ┃ ┃ ┗ 📜vu-tv-repair-in-bangalore.html
+ ┃ ┣ 📂issues-specific
+ ┃ ┃ ┣ 📜tv-backlight-problems-in-bangalore.html
+ ┃ ┃ ┣ 📜tv-power-issues-in-bangalore.html
+ ┃ ┃ ┣ 📜tv-remote-not-working-in-bangalore.html
+ ┃ ┃ ┣ 📜tv-screen-replacement-in-bangalore.html
+ ┃ ┃ ┣ 📜tv-software-update-issues-in-bangalore.html
+ ┃ ┃ ┣ 📜tv-sound-problems-in-bangalore.html
+ ┃ ┃ ┣ 📜tv-standby-light-blinking-in-bangalore.html
+ ┃ ┃ ┗ 📜tv-wall-mounting-service-in-bangalore.html
+ ┃ ┣ 📂tv-type-specific
+ ┃ ┃ ┣ 📜4k-ultra-hd-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜android-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜lcd-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜led-tv-repair-in-bangalore.html
+ ┃ ┃ ┣ 📜oled-tv-repair-in-bangalore.html
+ ┃ ┃ ┗ 📜smart-tv-repair-in-bangalore.html
+ ┃ ┗ 📜tv-repair-blog-bangalore.html
+ ┣ 📂images
+ ┃ ┣ 📂sideimages
+ ┃ ┃ ┣ 📜sideimage (1).png
+ ┃ ┃ ┣ 📜sideimage (10).png
+ ┃ ┃ ┣ 📜sideimage (11).png
+ ┃ ┃ ┣ 📜sideimage (12).png
+ ┃ ┃ ┣ 📜sideimage (13).png
+ ┃ ┃ ┣ 📜sideimage (14).png
+ ┃ ┃ ┣ 📜sideimage (15).png
+ ┃ ┃ ┣ 📜sideimage (2).png
+ ┃ ┃ ┣ 📜sideimage (3).png
+ ┃ ┃ ┣ 📜sideimage (4).png
+ ┃ ┃ ┣ 📜sideimage (5).png
+ ┃ ┃ ┣ 📜sideimage (6).png
+ ┃ ┃ ┣ 📜sideimage (7).png
+ ┃ ┃ ┣ 📜sideimage (8).png
+ ┃ ┃ ┗ 📜sideimage (9).png
+ ┃ ┣ 📜brands.png
+ ┃ ┣ 📜tv1.png
+ ┃ ┣ 📜tv2.png
+ ┃ ┣ 📜tv3.png
+ ┃ ┣ 📜tv4.png
+ ┃ ┗ 📜tv5.png
+ ┣ 📜about.html
+ ┣ 📜android-chrome-512x512.png
+ ┣ 📜apple-touch-icon.png
+ ┣ 📜contact.html
+ ┣ 📜dummy.html
+ ┣ 📜favicon.ico
+ ┣ 📜index.html
+ ┣ 📜logo2.png
+ ┣ 📜privacy-policy.html
+ ┣ 📜site.webmanifest
+ ┣ 📜t.txt
+ ┣ 📜terms-conditions.html
+ ┣ 📜testimonials.html
+ ┗ 📜tv-repair-near-me.html
