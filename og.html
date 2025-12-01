@@ -748,218 +748,243 @@
             box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.15);
         }
 
-        /* ===== CUSTOM DROPDOWN STYLES ===== */
-        .custom-dropdown {
-            position: relative;
-            width: 100%;
-        }
+        /* ===== CUSTOM DROPDOWN STYLES - UPDATED ===== */
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+}
 
-        .dropdown-selected {
-            background: white;
-            padding: 14px 16px;
-            border: 2px solid #e1e5e9;
-            border-radius: 10px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            min-height: 52px;
-        }
+.dropdown-selected {
+    background: white;
+    padding: 14px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    min-height: 52px;
+}
 
-        .dropdown-selected:hover {
-            border-color: var(--primary-color);
-        }
+.dropdown-selected:hover {
+    border-color: var(--primary-color);
+}
 
-        .dropdown-selected.active {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(26, 42, 108, 0.15);
-            transform: translateY(-2px);
-        }
+.dropdown-selected.active {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(26, 42, 108, 0.15);
+    transform: translateY(-2px);
+}
 
-        .selected-text {
-            color: #333;
-            font-weight: 500;
-        }
+.selected-text {
+    color: #333;
+    font-weight: 500;
+}
 
-        .selected-text.placeholder {
-            color: #888;
-        }
+.selected-text.placeholder {
+    color: #888;
+}
 
-        .dropdown-arrow {
-            color: var(--primary-color);
-            transition: transform 0.3s ease;
-            font-size: 12px;
-        }
+.dropdown-arrow {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    font-size: 12px;
+}
 
-        .dropdown-selected.active .dropdown-arrow {
-            transform: rotate(180deg);
-        }
+.dropdown-selected.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
 
-        /* Options Container */
-        .dropdown-options-container {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10000;
-        }
+/* Options Container - UPDATED for centered modal */
+.dropdown-options-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
 
-        .dropdown-options-container.active {
-            display: block;
-        }
+.dropdown-options-container.active {
+    display: flex;
+}
 
-        .dropdown-backdrop {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(2px);
-        }
+.dropdown-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+}
 
-        .dropdown-modal {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            border-radius: 20px 20px 0 0;
-            max-height: 80vh;
-            overflow: hidden;
-            animation: slideUp 0.3s ease;
-        }
+/* Modal Box - UPDATED for centered floating box */
+.dropdown-modal {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: fadeInScale 0.3s ease;
+    transform-origin: center;
+}
 
-        @keyframes slideUp {
-            from {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
-        .dropdown-header {
-            padding: 20px;
-            border-bottom: 1px solid #e1e5e9;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: var(--gradient-rainbow);
-            color: white;
-        }
+.dropdown-header {
+    padding: 20px;
+    border-bottom: 1px solid #e1e5e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gradient-rainbow);
+    color: white;
+}
 
-        .dropdown-header h3 {
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
+.dropdown-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 
-        .close-dropdown {
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 5px;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255,255,255,0.2);
-            transition: all 0.3s ease;
-        }
+.close-dropdown {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
 
-        .close-dropdown:hover {
-            background: rgba(255,255,255,0.3);
-            transform: scale(1.1);
-        }
+.close-dropdown:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.1);
+}
 
-        .dropdown-options {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            max-height: calc(80vh - 80px);
-            overflow-y: auto;
-        }
+.dropdown-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: calc(80vh - 80px);
+    overflow-y: auto;
+}
 
-        .dropdown-options li {
-            padding: 16px 20px;
-            border-bottom: 1px solid #f0f0f0;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 15px;
-            line-height: 1.4;
-        }
+.dropdown-options li {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 15px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+}
 
-        .dropdown-options li:last-child {
-            border-bottom: none;
-        }
+/* Highlight "No idea" options */
+.dropdown-options li[data-value="No idea / Not sure"],
+.dropdown-options li[data-value="Other Issue"] {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-left: 4px solid var(--secondary-color);
+    font-weight: 600;
+}
 
-        .dropdown-options li:hover {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            transform: translateX(5px);
-        }
+.dropdown-options li[data-value="No idea / Not sure"]:hover,
+.dropdown-options li[data-value="Other Issue"]:hover {
+    background: linear-gradient(135deg, #e9ecef, #dde2e6);
+    transform: translateX(5px);
+}
 
-        .dropdown-options li.selected {
-            background: var(--gradient-rainbow);
-            color: white;
-            font-weight: 600;
-            position: relative;
-        }
+/* Move "No idea" options to top */
+#tv_type_options .dropdown-options li[data-value="No idea / Not sure"] {
+    order: -1;
+    border-top: 2px solid #e1e5e9;
+    margin-top: 0;
+}
 
-        .dropdown-options li.selected::after {
-            content: "✓";
-            position: absolute;
-            right: 20px;
-            font-weight: bold;
-        }
+#issue_options .dropdown-options li[data-value="Other Issue"] {
+    order: -1;
+    border-top: 2px solid #e1e5e9;
+    margin-top: 0;
+}
 
-        /* Error State for custom dropdown */
-        .form-group.error .dropdown-selected {
-            border-color: var(--error-color);
-            box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.15);
-        }
+/* Add emoji indicator for "No idea" options */
+.dropdown-options li[data-value="No idea / Not sure"]::before,
+.dropdown-options li[data-value="Other Issue"]::before {
+    content: "💡 ";
+    margin-right: 8px;
+    font-size: 16px;
+}
 
-        /* Desktop - Show as regular dropdown */
-        @media (min-width: 769px) {
-            .dropdown-options-container {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                height: auto;
-                max-height: 300px;
-                margin-top: 5px;
-            }
-            
-            .dropdown-modal {
-                position: static;
-                border-radius: 12px;
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-                border: 1px solid #e1e5e9;
-                max-height: 300px;
-                animation: none;
-            }
-            
-            .dropdown-header {
-                display: none;
-            }
-            
-            .dropdown-backdrop {
-                display: none;
-            }
-            
-            .dropdown-options {
-                max-height: 300px;
-            }
-        }
+.dropdown-options li:last-child {
+    border-bottom: none;
+}
 
+.dropdown-options li:hover {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    transform: translateX(5px);
+}
+
+.dropdown-options li.selected {
+    background: var(--gradient-rainbow);
+    color: white;
+    font-weight: 600;
+    position: relative;
+}
+
+.dropdown-options li.selected::after {
+    content: "✓";
+    position: absolute;
+    right: 20px;
+    font-weight: bold;
+}
+
+/* Error State for custom dropdown */
+.form-group.error .dropdown-selected {
+    border-color: var(--error-color);
+    box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.15);
+}
+
+/* Desktop - Keep centered modal */
+@media (min-width: 769px) {
+    .dropdown-modal {
+        max-width: 450px;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .dropdown-modal {
+        width: 95%;
+        max-height: 85vh;
+    }
+    
+    .dropdown-options li {
+        padding: 14px 18px;
+    }
+}
         /* ===== SUCCESS MESSAGE ===== */
         .success-message {
             background: linear-gradient(135deg, var(--success-color), #45a049);
@@ -1775,72 +1800,71 @@ footer {
                                 <input type="tel" id="phone" name="phone" required placeholder="Enter your mobile number">
                                 <div class="error-message" id="phoneError"></div>
                             </div>
+<!-- CUSTOM DROPDOWN FOR TV TYPE -->
+<div class="form-group custom-dropdown">
+    <label for="hidden_tv_type" class="required">What type of TV do you have? 📺</label>
+    
+    <div class="dropdown-selected" data-target="tv_type">
+        <span class="selected-text placeholder">Select your TV type</span>
+        <span class="dropdown-arrow">▼</span>
+    </div>
+    
+    <div class="dropdown-options-container" id="tv_type_options">
+        <div class="dropdown-backdrop"></div>
+        <div class="dropdown-modal">
+            <div class="dropdown-header">
+                <h3>Select TV Type</h3>
+                <span class="close-dropdown">✕</span>
+            </div>
+            <ul class="dropdown-options">
+                <li data-value="">Select your TV type</li>
+                <li data-value="No idea / Not sure">No idea - No worries!</li>
+                <li data-value="LED TV">LED TV (Most Common)</li>
+                <li data-value="LCD TV">LCD TV</li>
+                <li data-value="OLED TV / QLED TV">OLED TV / QLED TV</li>
+                <li data-value="Android TV / Smart TV">Android TV / Smart TV</li>
+                <li data-value="4K TV / HD TV">4K TV / HD TV</li>
+                <li data-value="Curved TV">Curved TV</li>
+            </ul>
+        </div>
+    </div>
+    
+    <input type="hidden" name="tv_type" id="hidden_tv_type" required>
+    <div class="error-message" id="tvTypeError"></div>
+</div>
 
-                            <!-- CUSTOM DROPDOWN FOR TV TYPE -->
-                            <div class="form-group custom-dropdown">
-                                <label for="hidden_tv_type" class="required">What type of TV do you have? 📺</label>
-                                
-                                <div class="dropdown-selected" data-target="tv_type">
-                                    <span class="selected-text placeholder">Select your TV type</span>
-                                    <span class="dropdown-arrow">▼</span>
-                                </div>
-                                
-                                <div class="dropdown-options-container" id="tv_type_options">
-                                    <div class="dropdown-backdrop"></div>
-                                    <div class="dropdown-modal">
-                                        <div class="dropdown-header">
-                                            <h3>Select TV Type</h3>
-                                            <span class="close-dropdown">✕</span>
-                                        </div>
-                                        <ul class="dropdown-options">
-                                            <li data-value="">Select your TV type</li>
-                                            <li data-value="LED TV">LED TV (Most Common)</li>
-                                            <li data-value="LCD TV">LCD TV</li>
-                                            <li data-value="OLED TV / QLED TV">OLED TV / QLED TV</li>
-                                            <li data-value="Android TV / Smart TV">Android TV / Smart TV</li>
-                                            <li data-value="4K TV / HD TV">4K TV / HD TV</li>
-                                            <li data-value="Curved TV">Curved TV</li>
-                                            <li data-value="No idea / Not sure">No idea - No worries!</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <input type="hidden" name="tv_type" id="hidden_tv_type" required>
-                                <div class="error-message" id="tvTypeError"></div>
-                            </div>
-
-                            <!-- CUSTOM DROPDOWN FOR ISSUE TYPE -->
-                            <div class="form-group custom-dropdown">
-                                <label for="hidden_issue" class="required">What's happening with your TV? 🔍</label>
-                                
-                                <div class="dropdown-selected" data-target="issue">
-                                    <span class="selected-text placeholder">Select the main issue</span>
-                                    <span class="dropdown-arrow">▼</span>
-                                </div>
-                                
-                                <div class="dropdown-options-container" id="issue_options">
-                                    <div class="dropdown-backdrop"></div>
-                                    <div class="dropdown-modal">
-                                        <div class="dropdown-header">
-                                            <h3>Select TV Issue</h3>
-                                            <span class="close-dropdown">✕</span>
-                                        </div>
-                                        <ul class="dropdown-options">
-                                            <li data-value="">Select the main issue</li>
-                                            <li data-value="TV Not Turning On">1️⃣ TV Not Turning On – No power, TV completely dead</li>
-                                            <li data-value="Display Problem">2️⃣ Display Problem – Screen blank, lines, picture not visible</li>
-                                            <li data-value="Sound Problem">3️⃣ Sound Problem – No sound or sound not clear</li>
-                                            <li data-value="Remote / Buttons Not Working">4️⃣ Remote / Buttons Not Working – Not responding</li>
-                                            <li data-value="Wi-Fi / Connection Issue">5️⃣ Wi-Fi / Connection Issue – Internet not working</li>
-                                            <li data-value="Screen Broken / Physical Damage">6️⃣ Screen Broken / Physical Damage – Cracked screen</li>
-                                            <li data-value="Other Issue">7️⃣ Other Issue - No worries, we'll figure it out!</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <input type="hidden" name="issue" id="hidden_issue" required>
-                                <div class="error-message" id="issueError"></div>
-                            </div>
+<!-- CUSTOM DROPDOWN FOR ISSUE TYPE -->
+<div class="form-group custom-dropdown">
+    <label for="hidden_issue" class="required">What's happening with your TV? 🔍</label>
+    
+    <div class="dropdown-selected" data-target="issue">
+        <span class="selected-text placeholder">Select the main issue</span>
+        <span class="dropdown-arrow">▼</span>
+    </div>
+    
+    <div class="dropdown-options-container" id="issue_options">
+        <div class="dropdown-backdrop"></div>
+        <div class="dropdown-modal">
+            <div class="dropdown-header">
+                <h3>Select TV Issue</h3>
+                <span class="close-dropdown">✕</span>
+            </div>
+            <ul class="dropdown-options">
+                <li data-value="">Select the main issue</li>
+<li data-value="Other Issue">1️⃣ Other Issue - No worries, we'll figure it out!</li>
+<li data-value="TV Not Turning On">2️⃣ TV Not Turning On – No power, TV completely dead</li>
+<li data-value="Display Problem">3️⃣ Display Problem – Screen blank, lines, picture not visible</li>
+<li data-value="Sound Problem">4️⃣ Sound Problem – No sound or sound not clear</li>
+<li data-value="Remote / Buttons Not Working">5️⃣ Remote / Buttons Not Working – Not responding</li>
+<li data-value="Wi-Fi / Connection Issue">6️⃣ Wi-Fi / Connection Issue – Internet not working</li>
+<li data-value="Screen Broken / Physical Damage">7️⃣ Screen Broken / Physical Damage – Cracked screen</li>
+            </ul>
+        </div>
+    </div>
+    
+    <input type="hidden" name="issue" id="hidden_issue" required>
+    <div class="error-message" id="issueError"></div>
+</div>
 
                             <button type="submit" class="submit-btn" id="submitBtn">
                                 🚀 Book TV Repair Now
@@ -2399,113 +2423,113 @@ footer {
             }
         });
 
-        // ========== CUSTOM DROPDOWN FUNCTIONALITY ==========
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize all custom dropdowns
-            const dropdowns = document.querySelectorAll('.custom-dropdown');
+// ========== CUSTOM DROPDOWN FUNCTIONALITY ==========
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all custom dropdowns
+    const dropdowns = document.querySelectorAll('.custom-dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector('.dropdown-selected');
+        const selectedText = dropdown.querySelector('.selected-text');
+        const optionsContainer = dropdown.querySelector('.dropdown-options-container');
+        const options = dropdown.querySelectorAll('.dropdown-options li');
+        const hiddenInput = dropdown.querySelector('input[type="hidden"]');
+        const closeBtn = dropdown.querySelector('.close-dropdown');
+        const backdrop = dropdown.querySelector('.dropdown-backdrop');
+        
+        // Open dropdown
+        selected.addEventListener('click', function(e) {
+            e.stopPropagation();
             
-            dropdowns.forEach(dropdown => {
-                const selected = dropdown.querySelector('.dropdown-selected');
-                const selectedText = dropdown.querySelector('.selected-text');
-                const optionsContainer = dropdown.querySelector('.dropdown-options-container');
-                const options = dropdown.querySelectorAll('.dropdown-options li');
-                const hiddenInput = dropdown.querySelector('input[type="hidden"]');
-                const closeBtn = dropdown.querySelector('.close-dropdown');
-                const backdrop = dropdown.querySelector('.dropdown-backdrop');
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown-options-container.active').forEach(container => {
+                if (container !== optionsContainer) {
+                    container.classList.remove('active');
+                    container.parentElement.querySelector('.dropdown-selected').classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            optionsContainer.classList.toggle('active');
+            selected.classList.toggle('active');
+        });
+        
+        // Select option
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                const value = this.getAttribute('data-value');
+                const text = this.textContent;
                 
-                // Open dropdown
-                selected.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    
-                    // Close all other dropdowns
-                    document.querySelectorAll('.dropdown-options-container.active').forEach(container => {
-                        if (container !== optionsContainer) {
-                            container.classList.remove('active');
-                            container.parentElement.querySelector('.dropdown-selected').classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle current dropdown
-                    optionsContainer.classList.toggle('active');
-                    selected.classList.toggle('active');
-                });
+                // Update display
+                selectedText.textContent = text;
+                selectedText.classList.remove('placeholder');
                 
-                // Select option
-                options.forEach(option => {
-                    option.addEventListener('click', function() {
-                        const value = this.getAttribute('data-value');
-                        const text = this.textContent;
-                        
-                        // Update display
-                        selectedText.textContent = text;
-                        selectedText.classList.remove('placeholder');
-                        
-                        // Update hidden input
-                        hiddenInput.value = value;
-                        
-                        // Mark as selected
-                        options.forEach(opt => opt.classList.remove('selected'));
-                        this.classList.add('selected');
-                        
-                        // Close dropdown
-                        optionsContainer.classList.remove('active');
-                        selected.classList.remove('active');
-                        
-                        // Remove error state
-                        dropdown.classList.remove('error');
-                        const errorElement = dropdown.querySelector('.error-message');
-                        if (errorElement) {
-                            errorElement.style.display = 'none';
-                        }
-                        
-                        // Trigger validation
-                        const event = new Event('change', { bubbles: true });
-                        hiddenInput.dispatchEvent(event);
-                    });
-                });
+                // Update hidden input
+                hiddenInput.value = value;
+                
+                // Mark as selected
+                options.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
                 
                 // Close dropdown
-                function closeDropdown() {
-                    optionsContainer.classList.remove('active');
-                    selected.classList.remove('active');
+                optionsContainer.classList.remove('active');
+                selected.classList.remove('active');
+                
+                // Remove error state
+                dropdown.classList.remove('error');
+                const errorElement = dropdown.querySelector('.error-message');
+                if (errorElement) {
+                    errorElement.style.display = 'none';
                 }
                 
-                if (closeBtn) closeBtn.addEventListener('click', closeDropdown);
-                if (backdrop) backdrop.addEventListener('click', closeDropdown);
-                
-                // Initialize selected option
-                if (hiddenInput.value) {
-                    const selectedOption = Array.from(options).find(opt => 
-                        opt.getAttribute('data-value') === hiddenInput.value
-                    );
-                    if (selectedOption) {
-                        selectedText.textContent = selectedOption.textContent;
-                        selectedText.classList.remove('placeholder');
-                        selectedOption.classList.add('selected');
-                    }
-                }
-            });
-            
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.custom-dropdown')) {
-                    document.querySelectorAll('.dropdown-options-container.active').forEach(container => {
-                        container.classList.remove('active');
-                        container.parentElement.querySelector('.dropdown-selected').classList.remove('active');
-                    });
-                }
-            });
-            
-            // Add keyboard support
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    document.querySelectorAll('.dropdown-options-container.active').forEach(container => {
-                        container.classList.remove('active');
-                        container.parentElement.querySelector('.dropdown-selected').classList.remove('active');
-                    });
-                }
+                // Trigger validation
+                const event = new Event('change', { bubbles: true });
+                hiddenInput.dispatchEvent(event);
             });
         });
+        
+        // Close dropdown
+        function closeDropdown() {
+            optionsContainer.classList.remove('active');
+            selected.classList.remove('active');
+        }
+        
+        if (closeBtn) closeBtn.addEventListener('click', closeDropdown);
+        if (backdrop) backdrop.addEventListener('click', closeDropdown);
+        
+        // Initialize selected option
+        if (hiddenInput.value) {
+            const selectedOption = Array.from(options).find(opt => 
+                opt.getAttribute('data-value') === hiddenInput.value
+            );
+            if (selectedOption) {
+                selectedText.textContent = selectedOption.textContent;
+                selectedText.classList.remove('placeholder');
+                selectedOption.classList.add('selected');
+            }
+        }
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.custom-dropdown')) {
+            document.querySelectorAll('.dropdown-options-container.active').forEach(container => {
+                container.classList.remove('active');
+                container.parentElement.querySelector('.dropdown-selected').classList.remove('active');
+            });
+        }
+    });
+    
+    // Add keyboard support
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.dropdown-options-container.active').forEach(container => {
+                container.classList.remove('active');
+                container.parentElement.querySelector('.dropdown-selected').classList.remove('active');
+            });
+        }
+    });
+});
 
         // ========== FAQ FUNCTIONALITY ==========
         document.addEventListener('DOMContentLoaded', function() {
