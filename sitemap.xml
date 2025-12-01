@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- Homepage - Highest Priority -->
+    <url>
+        <loc>https://tvrepairinbangalore.in/</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Main Booking Page -->
+    <url>
+        <loc>https://tvrepairinbangalore.in/tv-repair-near-me.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Main Pages - Lower Priority -->
+    <url>
+        <loc>https://tvrepairinbangalore.in/about.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/contact.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/testimonials.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <!-- Legal Pages - Lowest Priority -->
+    <url>
+        <loc>https://tvrepairinbangalore.in/privacy-policy.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/terms-conditions.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+    
+    <!-- Blog Main Page -->
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/tv-repair-blog-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- ===== AREA-SPECIFIC PAGES ===== -->
+    <!-- Priority: Medium-High -->
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-bannerghatta-road.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-bellandur.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-btm-layout.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-electronic-city.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-hsr-layout.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-indiranagar.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-jayanagar.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-koramangala.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-malleswaram.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-marathahalli.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-rajajinagar.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-sarjapur-road.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-whitefield.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/area-specific/tv-repair-in-yelahanka.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- ===== BRAND-SPECIFIC PAGES ===== -->
+    <!-- Priority: High -->
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/brand-specific/samsung-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/brand-specific/lg-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/brand-specific/sony-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/brand-specific/mi-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/brand-specific/oneplus-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/brand-specific/panasonic-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/brand-specific/thomson-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/brand-specific/vu-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- ===== ISSUE-SPECIFIC PAGES ===== -->
+    <!-- Priority: Medium-High -->
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/issues-specific/tv-screen-replacement-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/issues-specific/tv-sound-problems-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/issues-specific/tv-power-issues-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/issues-specific/tv-backlight-problems-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/issues-specific/tv-remote-not-working-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/issues-specific/tv-software-update-issues-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/issues-specific/tv-standby-light-blinking-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/issues-specific/tv-wall-mounting-service-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- ===== TV TYPE-SPECIFIC PAGES ===== -->
+    <!-- Priority: Medium -->
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/tv-type-specific/led-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/tv-type-specific/smart-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/tv-type-specific/lcd-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/tv-type-specific/oled-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/tv-type-specific/android-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://tvrepairinbangalore.in/blog/tv-type-specific/4k-ultra-hd-tv-repair-in-bangalore.html</loc>
+        <lastmod>2025-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+</urlset>

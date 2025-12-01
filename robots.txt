@@ -1,0 +1,115 @@
+# robots.txt for tvrepairinbangalore.in
+# Last Updated: December 2024
+
+User-agent: *
+Allow: /
+
+# Sitemap reference
+Sitemap: https://tvrepairinbangalore.in/sitemap.xml
+
+# Allow all crawlers to access main content
+Disallow: /private/
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search/
+Disallow: /?s=
+Disallow: /*?*
+Disallow: /*.php$
+
+# Allow all image formats for Google Images
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+
+# Allow all CSS and JS for proper rendering
+Allow: /*.css$
+Allow: /*.js$
+
+# Special instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+Allow: /blog/
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Crawl-delay: 5
+
+User-agent: Yandex
+Crawl-delay: 3
+
+# Block unwanted crawlers (scrapers, spam bots)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+# Mobile crawlers
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Smartphone
+Allow: /
+Crawl-delay: 1
+
+# News crawlers
+User-agent: Googlebot-News
+Allow: /
+
+# Video crawlers
+User-agent: Googlebot-Video
+Allow: /
