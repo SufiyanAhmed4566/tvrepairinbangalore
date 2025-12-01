@@ -1,115 +1,313 @@
-# robots.txt for tvrepairinbangalore.in
-# Last Updated: December 2024
+# robots.txt for TVRepairInBangalore.in - Professional TV Repair Services Bangalore
+# Optimized for Google Search Console and SEO
+# Last updated: 2024-12-01
 
+# ========================================
+# Default Rules for All Crawlers
+# ========================================
 User-agent: *
 Allow: /
 
 # Sitemap reference
 Sitemap: https://tvrepairinbangalore.in/sitemap.xml
 
-# Allow all crawlers to access main content
-Disallow: /private/
-Disallow: /admin/
-Disallow: /cgi-bin/
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /search/
-Disallow: /?s=
-Disallow: /*?*
-Disallow: /*.php$
+# Allow all HTML pages (your service pages are critical)
+Allow: /$
+Allow: /*.html$
+Allow: /tv-repair-near-me$
+Allow: /blog/
+Allow: /testimonials$
+Allow: /contact$
+Allow: /about$
 
-# Allow all image formats for Google Images
+# Allow all important assets
+Allow: /favicon.ico$
+Allow: /android-chrome-512x512.png$
+Allow: /apple-touch-icon.png$
+Allow: /site.webmanifest$
+Allow: /logo2.png$
+
+# Allow images folder (critical for visual content)
+Allow: /images/
+Allow: /images/sideimages/
+Allow: /images/brands.png$
+Allow: /images/tv1.png$
+Allow: /images/tv2.png$
+Allow: /images/tv3.png$
+Allow: /images/tv4.png$
+Allow: /images/tv5.png$
+
+# Allow all image formats explicitly
 Allow: /*.png$
 Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.gif$
 Allow: /*.svg$
 Allow: /*.webp$
-Allow: /*.ico$
 
-# Allow all CSS and JS for proper rendering
+# Allow CSS and JS for proper rendering
 Allow: /*.css$
 Allow: /*.js$
 
-# Special instructions for major search engines
+# Disallow unnecessary files
+Disallow: /t.txt
+Disallow: /*.php$
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search/
+Disallow: /?s=
+Disallow: /*?*  # Block URLs with query parameters
+
+# ========================================
+# Googlebot - Priority Treatment
+# ========================================
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
+# Priority access to booking and service pages
+Allow: /tv-repair-near-me.html$
+Allow: /blog/brand-specific/
+Allow: /blog/area-specific/
+Allow: /blog/issues-specific/
+Allow: /blog/tv-type-specific/
+Crawl-delay: 0.5  # Faster crawl for Google
 
 User-agent: Googlebot-Image
-Allow: /
 Allow: /images/
-Allow: /blog/
+Allow: /images/sideimages/
+Allow: /logo2.png$
+Allow: /favicon.ico$
 Crawl-delay: 1
 
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 2
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 2
-
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Baiduspider
-Crawl-delay: 5
-
-User-agent: Yandex
-Crawl-delay: 3
-
-# Block unwanted crawlers (scrapers, spam bots)
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: dotbot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: GPTBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Claude-Web
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: PetalBot
-Disallow: /
-
-User-agent: ZoominfoBot
-Disallow: /
-
-User-agent: DataForSeoBot
-Disallow: /
-
-# Mobile crawlers
 User-agent: Googlebot-Mobile
 Allow: /
-Crawl-delay: 1
+Crawl-delay: 0.5
 
 User-agent: Googlebot-Smartphone
 Allow: /
-Crawl-delay: 1
+Crawl-delay: 0.5
 
-# News crawlers
 User-agent: Googlebot-News
 Allow: /
+Allow: /blog/
 
-# Video crawlers
 User-agent: Googlebot-Video
 Allow: /
+
+# ========================================
+# Other Major Search Engines
+# ========================================
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+User-agent: Baiduspider
+Crawl-delay: 5  # Slower for international bot
+
+# ========================================
+# Social Media Crawlers (for OG tags and sharing)
+# ========================================
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 1
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Pinterest
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slackbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: WhatsApp
+Allow: /
+Crawl-delay: 1
+
+User-agent: Instagram
+Allow: /
+Crawl-delay: 1
+
+# ========================================
+# Block Aggressive Bots and Scrapers
+# ========================================
+User-agent: AhrefsBot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: DotBot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: BLEXBot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: UptimeRobot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+Crawl-delay: 10
+
+User-agent: DataForSeoBot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: ZoominfoBot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: PetalBot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: CensysInspect
+Disallow: /
+Crawl-delay: 10
+
+User-agent: 360Spider
+Disallow: /
+Crawl-delay: 10
+
+User-agent: Sogou
+Disallow: /
+Crawl-delay: 10
+
+# AI Scrapers and Content Harvesters
+User-agent: GPTBot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: CCBot
+Disallow: /
+Crawl-delay: 10
+
+User-agent: anthropic-ai
+Disallow: /
+Crawl-delay: 10
+
+User-agent: Claude-Web
+Disallow: /
+Crawl-delay: 10
+
+User-agent: ChatGPT-User
+Disallow: /
+Crawl-delay: 10
+
+User-agent: Bytespider
+Disallow: /
+Crawl-delay: 10
+
+User-agent: OAI-Google-Extended
+Disallow: /
+Crawl-delay: 10
+
+User-agent: Applebot-Extended
+Disallow: /
+Crawl-delay: 10
+
+# ========================================
+# Mobile App Crawlers
+# ========================================
+User-agent: FacebookApp
+Allow: /
+Crawl-delay: 2
+
+User-agent: TwitterApp
+Allow: /
+Crawl-delay: 2
+
+# ========================================
+# Ad and Analytics Bots
+# ========================================
+User-agent: AdsBot-Google
+Allow: /
+Crawl-delay: 2
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+Crawl-delay: 2
+
+User-agent: AdsBot-Google-Mobile-Apps
+Allow: /
+Crawl-delay: 2
+
+# ========================================
+# Specialized Business Crawlers
+# ========================================
+User-agent: Applebot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Discordbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: SkypeUriPreview
+Allow: /
+Crawl-delay: 2
+
+User-agent: TelegramBot
+Allow: /
+Crawl-delay: 2
+
+# ========================================
+# Feed Readers and Aggregators
+# ========================================
+User-agent: Feedfetcher-Google
+Allow: /
+Crawl-delay: 2
+
+User-agent: FeedBurner
+Allow: /
+Crawl-delay: 2
+
+User-agent: Feedspot
+Allow: /
+Crawl-delay: 2
+
+# ========================================
+# Performance Monitoring Bots
+# ========================================
+User-agent: Pingdom
+Allow: /
+Crawl-delay: 5
+
+User-agent: UptimeRobot/2.0
+Allow: /
+Crawl-delay: 5
+
+# ========================================
+# Special Rules for Local SEO
+# ========================================
+# Priority access to location-based pages for local search
+User-agent: *
+Allow: /blog/area-specific/tv-repair-in-*.html$
+Allow: /blog/brand-specific/*-tv-repair-in-bangalore.html$
+Allow: /blog/issues-specific/tv-*-in-bangalore.html$
+Allow: /blog/tv-type-specific/*-tv-repair-in-bangalore.html$
