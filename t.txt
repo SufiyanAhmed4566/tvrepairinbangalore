@@ -52,21 +52,21 @@ tvrepairinbangalore
  ┃ ┗ 📜tv-repair-blog-bangalore.html
  ┣ 📂images
  ┃ ┣ 📂sideimages
- ┃ ┃ ┣ 📜sideimage (1).png
- ┃ ┃ ┣ 📜sideimage (10).png
- ┃ ┃ ┣ 📜sideimage (11).png
- ┃ ┃ ┣ 📜sideimage (12).png
- ┃ ┃ ┣ 📜sideimage (13).png
- ┃ ┃ ┣ 📜sideimage (14).png
- ┃ ┃ ┣ 📜sideimage (15).png
- ┃ ┃ ┣ 📜sideimage (2).png
- ┃ ┃ ┣ 📜sideimage (3).png
- ┃ ┃ ┣ 📜sideimage (4).png
- ┃ ┃ ┣ 📜sideimage (5).png
- ┃ ┃ ┣ 📜sideimage (6).png
- ┃ ┃ ┣ 📜sideimage (7).png
- ┃ ┃ ┣ 📜sideimage (8).png
- ┃ ┃ ┗ 📜sideimage (9).png
+ ┃ ┃ ┣ 📜sideimage(1).png
+ ┃ ┃ ┣ 📜sideimage(10).png
+ ┃ ┃ ┣ 📜sideimage(11).png
+ ┃ ┃ ┣ 📜sideimage(12).png
+ ┃ ┃ ┣ 📜sideimage(13).png
+ ┃ ┃ ┣ 📜sideimage(14).png
+ ┃ ┃ ┣ 📜sideimage(15).png
+ ┃ ┃ ┣ 📜sideimage(2).png
+ ┃ ┃ ┣ 📜sideimage(3).png
+ ┃ ┃ ┣ 📜sideimage(4).png
+ ┃ ┃ ┣ 📜sideimage(5).png
+ ┃ ┃ ┣ 📜sideimage(6).png
+ ┃ ┃ ┣ 📜sideimage(7).png
+ ┃ ┃ ┣ 📜sideimage(8).png
+ ┃ ┃ ┗ 📜sideimage(9).png
  ┃ ┣ 📜brands.png
  ┃ ┣ 📜tv1.png
  ┃ ┣ 📜tv2.png
@@ -161,21 +161,21 @@ tvrepairinbangalore
  ┃ ┗ 📜tv-repair-blog-bangalore.html
  ┣ 📂images
  ┃ ┣ 📂sideimages
- ┃ ┃ ┣ 📜sideimage (1).png
- ┃ ┃ ┣ 📜sideimage (10).png
- ┃ ┃ ┣ 📜sideimage (11).png
- ┃ ┃ ┣ 📜sideimage (12).png
- ┃ ┃ ┣ 📜sideimage (13).png
- ┃ ┃ ┣ 📜sideimage (14).png
- ┃ ┃ ┣ 📜sideimage (15).png
- ┃ ┃ ┣ 📜sideimage (2).png
- ┃ ┃ ┣ 📜sideimage (3).png
- ┃ ┃ ┣ 📜sideimage (4).png
- ┃ ┃ ┣ 📜sideimage (5).png
- ┃ ┃ ┣ 📜sideimage (6).png
- ┃ ┃ ┣ 📜sideimage (7).png
- ┃ ┃ ┣ 📜sideimage (8).png
- ┃ ┃ ┗ 📜sideimage (9).png
+ ┃ ┃ ┣ 📜sideimage(1).png
+ ┃ ┃ ┣ 📜sideimage(10).png
+ ┃ ┃ ┣ 📜sideimage(11).png
+ ┃ ┃ ┣ 📜sideimage(12).png
+ ┃ ┃ ┣ 📜sideimage(13).png
+ ┃ ┃ ┣ 📜sideimage(14).png
+ ┃ ┃ ┣ 📜sideimage(15).png
+ ┃ ┃ ┣ 📜sideimage(2).png
+ ┃ ┃ ┣ 📜sideimage(3).png
+ ┃ ┃ ┣ 📜sideimage(4).png
+ ┃ ┃ ┣ 📜sideimage(5).png
+ ┃ ┃ ┣ 📜sideimage(6).png
+ ┃ ┃ ┣ 📜sideimage(7).png
+ ┃ ┃ ┣ 📜sideimage(8).png
+ ┃ ┃ ┗ 📜sideimage(9).png
  ┃ ┣ 📜brands.png
  ┃ ┣ 📜tv1.png
  ┃ ┣ 📜tv2.png
